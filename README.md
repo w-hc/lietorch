@@ -4,7 +4,7 @@
 
 This is a CPU-only fork of Zachary Teed's wonderful LieTorch Library. It's
 intended for use as classroom instructional materials, and students are not
-assumed to have GPU-enabled machines.
+expected to have GPU-enabled machines.
 
 
 ## Introduction
