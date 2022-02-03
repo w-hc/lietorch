@@ -1,4 +1,10 @@
-# LieTorch: Tangent Space Backpropagation
+# LieTorch: Tangent Space Backpropagation. CPU-only.
+
+## Prelude
+
+This is a CPU-only fork of Zachary Teed's wonderful LieTorch Library. It's
+intended for use as classroom instructional materials, and students are not
+assumed to have GPU-enabled machines.
 
 
 ## Introduction
@@ -7,7 +13,7 @@ The LieTorch library generalizes PyTorch to 3D transformation groups. Just as `t
 
 <center><img src="lietorch.png" width="480" style="center"></center>
 
-[Tangent Space Backpropagation for 3D Transformation Groups](https://arxiv.org/pdf/2103.12032.pdf)  
+[Tangent Space Backpropagation for 3D Transformation Groups](https://arxiv.org/pdf/2103.12032.pdf)
 Zachary Teed and Jia Deng, CVPR 2021
 
 ```
@@ -21,47 +27,23 @@ Zachary Teed and Jia Deng, CVPR 2021
 
 
 ## Installation
+```
+pip install git+https://github.com/w-hc/lietorch
+```
 
-
-### Requirements: 
- * Cuda >= 10.1 (with nvcc compiler)
+### Requirements:
  * PyTorch >= 1.8
-
-We recommend installing within a virtual enviornment. Make sure you clone using the `--recursive` flag. If you are using Anaconda, the following command can be used to install all dependencies
-```
-git clone --recursive https://github.com/princeton-vl/lietorch.git
-cd lietorch
-
-conda create -n lie_env
-conda activate lie_env
-conda install scipy pyyaml pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-```
 
 To run the examples, you will need OpenCV and Open3D. Depending on your operating system, OpenCV and Open3D can either be installed with pip or may need to be built from source
 ```
 pip install opencv-python open3d
 ```
 
-### Installing (from source)
-
-Clone the repo using the `--recursive` flag and install using `setup.py` (may take up to 10 minutes)
-```
-git clone --recursive https://github.com/princeton-vl/lietorch.git
-python setup.py install
-./run_tests.sh
-```
-
-### Installing (pip)
-You can install the library directly using pip
-```bash
-pip install git+https://github.com/princeton-vl/lietorch.git
-```
-
 
 
 ## Overview
 
-LieTorch currently supports the 3D transformation groups. 
+LieTorch currently supports the 3D transformation groups.
 
 | Group  | Dimension | Action |
 | -------| --------- | ------------- |
@@ -138,4 +120,4 @@ We provide real use cases in the examples directory
 3. RGB-D SLAM / VO
 
 ### Acknowledgements
-Many of the Lie Group implementations are adapted from [Sophus](https://github.com/strasdat/Sophus). 
+Many of the Lie Group implementations are adapted from [Sophus](https://github.com/strasdat/Sophus).
